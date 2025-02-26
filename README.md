@@ -76,7 +76,7 @@ Redis is used for caching query results and improving performance. You'll need t
 
 #### Windows:
 Windows doesn't natively support Redis. We recommend using Docker:
-
+(Can skip this step if using docker to run the app)
 1. Install Docker Desktop for Windows from [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
 2. Run Redis with Docker:
 ```
@@ -104,6 +104,10 @@ Or, run `./db_update/Update.py` manually in local.
 
 > By default, the home page will open. The routes have to be defined manually.
 
+Alternatively, you can run the app using Docker:
+```PowerShell
+docker-compose up --build
+```
 
 9. We have added support for the following routes:
 ```
