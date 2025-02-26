@@ -1,15 +1,16 @@
 import json
+import os
 import redis
-from dotenv import dotenv_values
-
+from dotenv import load_dotenv
+load_dotenv()
 
 class RedisClient:
     def __init__(self,expiry:int = 3600):
         # Load environment variables
-        env_vars = dotenv_values(".env")
-        redis_host = env_vars.get("REDIS_HOST", "localhost")
-        redis_port = int(env_vars.get("REDIS_PORT", 6379))
-        redis_password = env_vars.get("REDIS_PASSWORD", None)
+
+        redis_host = os.getenv("REDIS_HOST", "localhost")
+        redis_port = int(os.getenv("REDIS_PORT", 6379))
+        redis_password = os.getenv("REDIS_PASSWORD", None)
 
         # Initialize Redis connection
         self.redis = redis.Redis(

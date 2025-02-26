@@ -1,7 +1,6 @@
 import os
 import redis
 from dotenv import load_dotenv, find_dotenv
-import argparse
 
 def check_redis_env_vars():
     # Load current environment variables
