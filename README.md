@@ -48,7 +48,7 @@ HUGGINGFACEHUB_API_TOKEN='[Your_hugging_face_token_here]'
 PINECONE_API_KEY='[Your pinecone api here]'
 
 # Redis
-REDIS_HOST=localhost
+REDIS_HOST=localhost or use redis if using docker to run the app
 REDIS_PORT=6379
 REDIS_PASSWORD='[Your redis password here]' # Optional
 ```
@@ -60,7 +60,6 @@ REDIS_PASSWORD='[Your redis password here]' # Optional
 # Example
 client = Pinecone(api_key={PINECONE_API}) # Replace the string with yours
 ```
-
 
 6. Set up Redis
 
